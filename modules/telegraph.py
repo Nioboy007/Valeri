@@ -10,7 +10,7 @@ async def telegraph(e):
 
 @new_cmd(pattern="(cupload|cup) ?(.*)")
 async def c_upload(e):
-    if not e.is_Reply:
+    if not e.is_reply:
         return await e.edit("Reply to a media to upload it to Cloud.")
     msg = await e.reply("Processing...")
     reply_ = await e.get_reply_message()
