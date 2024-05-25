@@ -29,6 +29,6 @@ async def c_upload(e):
         resp = requests.post("https://envs.sh", files={"file": data})
         
         if resp.status_code == 200:
-            await msg.edit(f"https://envs.sh/{resp.text}")
+            await msg.edit(f"{resp.text}")
         else:
             await msg.edit("Something went wrong. Please try again later.")
